@@ -9,14 +9,16 @@ import { flashcards } from "./Objects";
 
 export default function Questions(){
     return(
-        <div className="questions">
-            <div className="logo">
-                <img className="img-logo" alt="Logo" src={logo2} />
-                <h1>ZapRecall</h1>
+        <>
+            <div className="questions">
+                <div className="logo">
+                    <img className="img-logo" alt="Logo" src={logo2} />
+                    <h1>ZapRecall</h1>
+                </div>
+                {flashcards.map((flashcard, index) =>(
+                    <Flashcard id={index} question={flashcard.question} answer={flashcard.answer} />
+                ))}
             </div>
-            {flashcards.map((flashcard, index) =>(
-                <Flashcard id={index} question={flashcard.question} answer={flashcard.answer} />
-            ))}
-        </div>
+        </>
     );
 }

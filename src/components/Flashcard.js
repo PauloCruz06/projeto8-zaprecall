@@ -15,7 +15,7 @@ export default function Flashcard({id, question, answer}){
             <div className="flashcard">
                 {clicked ? (
                     <button className="card-back" onClick={() => setClicked(!clicked)}>
-                        <p>Pergunta {id}</p><ion-icon name="play-outline"></ion-icon>
+                        <p>Pergunta {id+1}</p><ion-icon name="play-outline"></ion-icon>
                     </button>
                 ) : (
                     <button className="card-front">
@@ -28,9 +28,9 @@ export default function Flashcard({id, question, answer}){
                             <>
                                 <p>{answer}</p>
                                 <div className="options">
-                                    <button className="red" onClick={() => setColor("red")}>Não lembrei</button>
-                                    <button className="yellow" onClick={() => setColor("yellow")} >Quase não lembrei</button>
-                                    <button className="green" onClick={() => setColor("green")} >Zap!</button>    
+                                    <button className="button-red" onClick={() => setColor("red")}>Não lembrei</button>
+                                    <button className="button-yellow" onClick={() => setColor("yellow")} >Quase não lembrei</button>
+                                    <button className="button-green" onClick={() => setColor("green")} >Zap!</button>    
                                 </div>
                             </>
                         )}
@@ -38,11 +38,27 @@ export default function Flashcard({id, question, answer}){
                 )}
             </div>
         );
-    } else{
+    } else if(color === "red"){
         return (
-            <div className={`flashcard ${color}`}>
+            <div className="flashcard red">
                 <button className="card-back">
-                    <p>Pergunta {id}</p><ion-icon name="play-outline"></ion-icon>
+                    <p>Pergunta {id+1}</p>{<ion-icon name="close-circle"></ion-icon>}
+                </button>
+            </div>
+        );
+    } else if(color === "yellow"){
+        return (
+            <div className="flashcard yellow">
+                <button className="card-back">
+                    <p>Pergunta {id+1}</p>{<ion-icon name="help-circle"></ion-icon>}
+                </button>
+            </div>
+        );
+    } else if(color === "green"){
+        return (
+            <div className="flashcard green">
+                <button className="card-back">
+                    <p>Pergunta {id+1}</p>{<ion-icon name="checkmark-circle"></ion-icon>}
                 </button>
             </div>
         );
