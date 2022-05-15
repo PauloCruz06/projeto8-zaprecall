@@ -8,5 +8,3 @@ export const flashcards = [
     {question: "Usamos props para...", answer: "passar diferentes informações para componentes"},
     {question: "Usamos estado (state) para...", answer: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente"}
 ];
-
-export const newIcon = [];

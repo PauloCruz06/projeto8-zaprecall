@@ -11,6 +11,12 @@ import Footer from "./Footer";
 
 import { flashcards } from "./Objects";
 
+const newFlashcards = flashcards.sort(rand);
+
+function rand(){
+    return Math.random()-0.5;
+}
+
 export default function Questions(){
     const [icons, setIcons] = React.useState([]);
 
@@ -27,7 +33,6 @@ export default function Questions(){
         } 
     }
 
-
     return(
         <>
             <div className="questions">
@@ -35,13 +40,13 @@ export default function Questions(){
                     <img className="img-logo" alt="Logo" src={logo2} />
                     <h1>ZapRecall</h1>
                 </div>
-                {flashcards.map((flashcard, index) =>(
+                {newFlashcards.map((flashcard, index) =>(
                     <Flashcard id={index} question={flashcard.question} answer={flashcard.answer} addIcon={addIcon} />
                 ))}
             </div>
             <Footer>
-                    {icons.length === flashcards.length ? <Finished icons={icons} meta={8} /> : <></>}
-                    <p>{icons.length}/{flashcards.length} CONCLUÍDOS</p>
+                    {icons.length === newFlashcards.length ? <Finished icons={icons} meta={8} /> : <></>}
+                    <p>{icons.length}/{newFlashcards.length} CONCLUÍDOS</p>
                     <div className="icons">
                         {icons.map((icon) => (
                             <ion-icon name={icon}></ion-icon>
