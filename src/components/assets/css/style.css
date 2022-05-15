@@ -233,3 +233,39 @@ button{
     align-items: center;
 }
 
+.finished{
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+.finished p{
+    width: 222px;
+    height: auto;
+    text-align: center;
+}
+
+.result{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+}
+
+.result img{
+    width: 23px;
+    height: 23px;
+}
+
+.result h1{
+    font-weight: 500;
+    font-size: 18px;
+    color: #333333;
+    margin-left: 5px;
+}

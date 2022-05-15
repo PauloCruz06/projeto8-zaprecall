@@ -6,6 +6,7 @@ import "./assets/css/style.css";
 import logo2 from "./assets/images/logo2.png";
 
 import Flashcard from "./Flashcard";
+import Finished from "./Finished";
 import Footer from "./Footer";
 
 import { flashcards } from "./Objects";
@@ -39,6 +40,7 @@ export default function Questions(){
                 ))}
             </div>
             <Footer>
+                    {icons.length === flashcards.length ? <Finished icons={icons} meta={8} /> : <></>}
                     <p>{icons.length}/{flashcards.length} CONCLUÍDOS</p>
                     <div className="icons">
                         {icons.map((icon) => (
