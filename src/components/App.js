@@ -8,7 +8,7 @@ export default function App(){
 
     return(
         <>
-            {screen === 'home' ? <Home setScreen={setScreen} /> : <Questions />}
+            {screen === 'home' ? <Home setScreen={setScreen} /> : <Questions setScreen={setScreen}/>}
         </>
     );
 }
