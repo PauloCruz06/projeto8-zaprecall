@@ -18,7 +18,7 @@ export function rand(){
     return Math.random()-0.5;
 }
 
-export default function Questions({ setScreen }){
+export default function Questions({ setScreen, meta }){
     const [icons, setIcons] = React.useState([]);
 
     function addIcon (color){
@@ -46,7 +46,7 @@ export default function Questions({ setScreen }){
                 ))}
             </div>
             <Footer>
-                    {icons.length === flashcards.length ? <Finished icons={icons} meta={8} /> : <></>}
+                    {icons.length === flashcards.length ? <Finished icons={icons} meta={meta} /> : <></>}
                     <p>{icons.length}/{flashcards.length} CONCLUÍDOS</p>
                     <div className="icons">
                         {icons.map((icon) => (
