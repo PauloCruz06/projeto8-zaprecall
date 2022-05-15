@@ -16,6 +16,24 @@ button{
     font-family: 'Recursive';
 }
 
+[name~=close-circle]{
+    width: 27px;
+    height: 30px;
+    color: #FF3030;
+}
+
+[name~=help-circle]{
+    width: 27px;
+    height: 30px;
+    color: #FF922E;
+}
+
+[name~=checkmark-circle]{
+    width: 27px;
+    height: 30px;
+    color: #2FBE34;
+}
+
 .root{
     width: 100%;
     height: 100%;
@@ -54,7 +72,7 @@ button{
 .questions{
     width: 100%;
     height: 100%;
-    margin-bottom: 70px;
+    margin-bottom: 170px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -172,21 +190,9 @@ button{
     text-decoration-line: line-through;
 }
 
-.red ion-icon{
-    width: 23px;
-    height: 23px;
-    color: #FF3030;
-}
-
 .yellow p{
     color: #FF922E;
     text-decoration-line: line-through;
-}
-
-.yellow ion-icon{
-    width: 23px;
-    height: 23px;
-    color: #FF922E;
 }
 
 .green p{
@@ -194,8 +200,36 @@ button{
     text-decoration-line: line-through;
 }
 
-.green ion-icon{
-    width: 23px;
-    height: 23px;
-    color: #2FBE34;
+.footer{
+    width: 100%;
+    min-height: 70px;
+    background-color: #ffffff;
+    color: #333333;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Recursive';
+    font-weight: 400;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
 }
+
+.footer p{
+    margin-top: 9px;
+    margin-bottom: 6px;
+}
+
+.icons{
+    width: auto;
+    height: auto;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
